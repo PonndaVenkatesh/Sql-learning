@@ -1,14 +1,21 @@
--- Day 1: Basic SELECT statements
+-- SELECT BASICS
 
 -- Select all columns
 SELECT * FROM employees;
 
 -- Select specific columns
-SELECT name, department FROM employees;
+SELECT employee_id, name, department
+FROM employees;
 
--- Limit output
-SELECT * FROM employees
-LIMIT 5;
+-- Limit number of rows
+SELECT *
+FROM employees
+LIMIT 10;
+
+-- Get unique departments
+SELECT DISTINCT department
+FROM employees;
+
 
 
 
