@@ -10,3 +10,5 @@ SELECT name, department FROM employees;
 SELECT * FROM employees
 LIMIT 5;
 
+
+
