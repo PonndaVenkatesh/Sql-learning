@@ -52,6 +52,9 @@ SELECT *
 FROM employees
 LIMIT 5;
 
+added where order by and limit queries
+
+
 
 
 
