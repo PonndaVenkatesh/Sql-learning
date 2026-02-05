@@ -54,6 +54,35 @@ LIMIT 5;
 
 added where order by and limit queries
 
+-- ====================================
+-- DAY 3: GROUP BY & HAVING
+-- ====================================
+
+-- Count employees per department
+SELECT department, COUNT(*) AS total_employees
+FROM employees
+GROUP BY department;
+
+-- Average salary per department
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department;
+
+-- Filter groups using HAVING
+SELECT department, COUNT(*) AS total_employees
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 10;
+
+-- Departments with high average salary
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > 60000;
+
+added group by queries
+
+
 
 
 
