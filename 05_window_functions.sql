@@ -61,4 +61,31 @@ FROM employees;
 
 added rank and dense_rank window functions
 
+-- =====================================
+-- DAY 10: LAG & LEAD
+-- =====================================
+
+-- LAG: get previous row value
+SELECT employee_id,
+       department,
+       salary,
+       LAG(salary) OVER (
+           PARTITION BY department
+           ORDER BY salary DESC
+       ) AS previous_salary
+FROM employees;
+
+-- LEAD: get next row value
+SELECT employee_id,
+       department,
+       salary,
+       LEAD(salary) OVER (
+           PARTITION BY department
+           ORDER BY salary DESC
+       ) AS next_salary
+FROM employees;
+
+added lag and lead window functions
+
+
 
